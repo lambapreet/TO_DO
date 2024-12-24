@@ -17,7 +17,9 @@
         <h2>Task List</h2>
         {% for task in tasks %}
             <div>
+                <a href="{% url "update_task" task.id %}">Update</a>
                 {{ task }}
+                <a href="{% url "delete" task.id %}">Delete</a> 
             </div>
         {% endfor %}
     {% else %}
